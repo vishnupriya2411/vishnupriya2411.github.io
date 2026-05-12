@@ -88,6 +88,11 @@
       </li>
       
       <li class="bold">
+        <a aria-label="Navigate to the Certifications section" href="#certifications" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-verified-user small"></i><span>Certifications</span></a>
+      </li>
+
+      <li class="bold">
         <!--
         ICONS:
         -->
@@ -124,12 +129,13 @@
   </nav>
 
   <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
+  <nav class="hide-on-large only trigger z-depth-1" style="background: linear-gradient(135deg, #004d40 0%, #00796b 100%); box-shadow: 0 2px 12px rgba(0,77,64,0.18);">
     <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Vishnu
-        Bhogayata</a><span class="black-text">Software Developer</span>
+      class="button-collapse" style="color:#fff;"><i class="mdi-navigation-menu"></i></a>
+    <div class="name-title" style="display:flex; flex-direction:column; justify-content:center; padding: 0 8px;">
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#intro"
+        style="font-family:'Georgia',serif; font-size:1.05rem; font-weight:700; color:#e0f2f1; letter-spacing:0.04em; line-height:1.2; text-decoration:none;">Vishnu Priya Nuthanapati</a>
+      <span style="font-size:0.72rem; color:#80cbc4; letter-spacing:0.12em; text-transform:uppercase; font-family:'Georgia',serif;">Bioinformatician</span>
     </div>
   </nav>
 
@@ -154,6 +160,10 @@
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
 
+      <li class="bold">
+        <a aria-label="Navigate to the Certifications section" href="#certifications" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-verified-user small"></i><span>Certifications</span></a>
+      </li>
       <li class="bold">
         <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-school small"></i><span>Education</span></a>
@@ -248,7 +258,58 @@
       <h3 class="page-title white-text teal">Experience</h3>
       <div class="container">
 
-        <!-- Latest Experience -->
+        <!-- UMMC Experience - Latest -->
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a href="https://www.umc.edu/" target="_blank"><img alt="UMMC logo"
+                    src="/assets/img/ummc.png" class="responsive-img center-block" /></a>
+              </div>
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title"><a href="https://www.umc.edu/" target="_blank"
+                      class="teal-text hoverline">University of Mississippi Medical Center</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">Bioinformatician 1</div>
+            <ul>
+              <li>
+                Analyzed GeoMx spatial transcriptomics with CellChat to map region-specific expression and signaling,
+                identifying 30+ key ligand–receptor pairs and spatial niches for targeted pathway validation
+              </li>
+              <li>
+                Developed an interactive R Shiny CellAtlas for placental marker exploration, enabling real-time
+                visualization of 20k+ single-cell profiles and reducing marker query and export time by 40%
+              </li>
+              <li>
+                Integrated PacBio methylation, variant, and ClinVar data to prioritize clinically relevant loci,
+                flagging 150+ candidate sites and streamlining patient-centered genomic interpretation by 35%
+              </li>
+              <li>
+                Identified alternative splicing changes in genes of interest by quantifying differential exon usage
+                across conditions, uncovering phenotype-associated exon patterns in 10+ key transcripts
+              </li>
+              <li>
+                Designed small and bulk RNA-seq pipelines with mixed-effect models, enabling robust differential
+                expression and pathway insights across 200+ samples
+              </li>
+              <li>
+                Built de novo transcriptome assemblies for non-model organisms, improving downstream analyses with
+                limited genomic references
+              </li>
+              <li>
+                <b>Tools:</b> R, R Shiny, CellChat, GeoMx, PacBio, ClinVar, RNA-seq, Spatial Transcriptomics, HPC
+              </li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>Jun 2025 - Present | Jackson, MS, USA</span>
+          </div>
+        </div>
+
+        <!-- Previous Experience -->
         <div class="card">
           <div class="card-content">
             <div class="row">
@@ -757,7 +818,184 @@ interns and doctors across all departments
       </div>
     </section>
 
-    <!-- Seventh Section: Education -->
+    <!-- Certifications Section -->
+    <section id="certifications" class="section scrollspy">
+      <h3 class="page-title white-text teal">Certifications</h3>
+      <div class="container">
+
+        <style>
+          .cert-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            padding: 8px 0 24px;
+          }
+          .cert-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 14px rgba(0,77,64,0.10);
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(50% - 24px);
+            min-width: 260px;
+            max-width: 440px;
+            overflow: hidden;
+            transition: box-shadow 0.22s ease, transform 0.22s ease;
+            text-decoration: none;
+            color: inherit;
+            border: 2px solid transparent;
+            cursor: pointer;
+          }
+          .cert-card:hover {
+            box-shadow: 0 10px 32px rgba(0,77,64,0.20);
+            transform: translateY(-5px);
+            border-color: #80cbc4;
+          }
+          .cert-card-header {
+            background: linear-gradient(135deg, #004d40 0%, #00796b 100%);
+            padding: 26px 24px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+          }
+          .cert-icon-circle {
+            width: 54px;
+            height: 54px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+          .cert-icon-circle i {
+            font-size: 1.6rem;
+            color: #fff;
+          }
+          .cert-icon-circle img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+          }
+          .cert-header-text .cert-issuer {
+            font-size: 0.70rem;
+            color: #80cbc4;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          .cert-header-text .cert-name {
+            font-size: 1.07rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+          }
+          .cert-card-body {
+            padding: 18px 24px 14px;
+            flex: 1;
+          }
+          .cert-desc {
+            font-size: 0.87rem;
+            color: #555;
+            line-height: 1.58;
+            margin-bottom: 14px;
+          }
+          .cert-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+          }
+          .cert-tag {
+            background: #e0f2f1;
+            color: #00796b;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            padding: 3px 11px;
+            font-weight: 600;
+          }
+          .cert-card-footer {
+            padding: 11px 24px 15px;
+            border-top: 1px solid #e0f2f1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .cert-cta {
+            font-size: 0.82rem;
+            color: #00796b;
+            font-weight: 700;
+          }
+          .cert-source {
+            font-size: 0.78rem;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+        </style>
+
+        <div class="cert-grid">
+
+          <!-- NVIDIA Deep Learning -->
+          <a class="cert-card" href="https://learn.nvidia.com/certificates?id=2BxbfCwSQIOQNjNbOa8FrA" target="_blank" rel="noopener noreferrer">
+            <div class="cert-card-header">
+              <div class="cert-icon-circle">
+                <i class="fa fa-microchip"></i>
+              </div>
+              <div class="cert-header-text">
+                <div class="cert-issuer">NVIDIA &middot; Deep Learning Institute</div>
+                <div class="cert-name">Fundamentals of Deep Learning</div>
+              </div>
+            </div>
+            <div class="cert-card-body">
+              <p class="cert-desc">Hands-on training in deep learning fundamentals — building and training neural networks for image classification, object detection, and data augmentation using PyTorch and TensorFlow on real-world datasets.</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Deep Learning</span>
+                <span class="cert-tag">Neural Networks</span>
+                <span class="cert-tag">PyTorch</span>
+                <span class="cert-tag">NVIDIA DLI</span>
+              </div>
+            </div>
+            <div class="cert-card-footer">
+              <span class="cert-cta">View Credential &rarr;</span>
+              <span class="cert-source"><i class="fa fa-external-link"></i> learn.nvidia.com</span>
+            </div>
+          </a>
+
+          <!-- AWS Cloud Practitioner -->
+          <a class="cert-card" href="https://www.credly.com/badges/636a1aa2-b059-4961-9c5e-457d254c8447/linked_in_profile" target="_blank" rel="noopener noreferrer">
+            <div class="cert-card-header">
+              <div class="cert-icon-circle">
+                <img src="/assets/img/aws.png" alt="AWS" />
+              </div>
+              <div class="cert-header-text">
+                <div class="cert-issuer">Amazon Web Services &middot; Credly Verified</div>
+                <div class="cert-name">AWS Certified Cloud Practitioner</div>
+              </div>
+            </div>
+            <div class="cert-card-body">
+              <p class="cert-desc">Validates foundational knowledge of AWS Cloud services, core architecture, security, pricing, and support — demonstrating fluency in cloud computing concepts and AWS platform fundamentals.</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Cloud Computing</span>
+                <span class="cert-tag">AWS</span>
+                <span class="cert-tag">Infrastructure</span>
+                <span class="cert-tag">Credly Verified</span>
+              </div>
+            </div>
+            <div class="cert-card-footer">
+              <span class="cert-cta">View Credential &rarr;</span>
+              <span class="cert-source"><i class="fa fa-external-link"></i> credly.com</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+        <!-- Seventh Section: Education -->
     <section id="education" class="section scrollspy">
       <h3 class="page-title white-text teal">Education</h3>
       <div class="container">
